@@ -8,7 +8,8 @@ function App() {
 
   return (
     <>
-      <Site/>
+      <Nav/>
+      <Outlet />
     </>
   )
 }
