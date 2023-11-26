@@ -1,6 +1,6 @@
 export default function ContactPage() {
     return (
-        <div class='justify-content-center'>
+        <div className=' justify-content-center border border-primary '>
             <h2>Contact</h2>
             <form action="">
                 <label htmlFor="name">Name:</label>
@@ -8,7 +8,7 @@ export default function ContactPage() {
                 <label for="email">Email address</label>
                 <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email"/>
 
-                <div class="form-group">
+                <div className="form-group">
                     <label for="message">Message</label>
                     <textarea class="form-control" id="message" rows="3"></textarea>
                 </div>

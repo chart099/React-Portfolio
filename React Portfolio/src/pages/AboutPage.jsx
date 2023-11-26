@@ -1,8 +1,8 @@
 export default function AboutPage() {
     return (
-        <div>
+        <div className="border border-primary">
             <h2>About Me</h2>
-            <div class="d-flex justify-content-center">
+            <div className="d-flex justify-content-center">
                 <img src="/src/assets/pothos stock image.jpg" alt="photo of a plant" class="img-fluid w-50"/>
             </div>
             
