@@ -7,7 +7,7 @@ export default function Nav() {
         
       <Navbar
         links={[
-          <Link key={1} className="nav-link text-light" to="/">
+          <Link key={1} className="nav-link text-light test" to="/">
             About Me
           </Link>,
           <Link key={2} className="nav-link text-light" to="/Contact">
@@ -18,7 +18,7 @@ export default function Nav() {
          </Link>,
           <Link key={4} className="nav-link text-light" to="/Resume">
           Resume
-        </Link>,
+        </Link>
         ]}
       />
     );

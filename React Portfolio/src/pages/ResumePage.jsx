@@ -1,6 +1,6 @@
 export default function ResumePage() {
     return (
-        <div>
+        <div >
             <h3>Front-End Skills</h3>
             <ul>
                 <li>React</li>
