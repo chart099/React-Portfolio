@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import Navbar from './UI/Navbar';
+import Navbar from './UI/Navbar.jsx';
 
 export default function Nav() {
     // The Navbar UI component will render each of the Link elements in the links prop
@@ -7,6 +7,7 @@ export default function Nav() {
         
       <Navbar
         links={[
+          <>
           <Link key={1} className="nav-link text-light test" to="/">
             About Me
           </Link>,
@@ -19,6 +20,7 @@ export default function Nav() {
           <Link key={4} className="nav-link text-light" to="/Resume">
           Resume
         </Link>
+        </>
         ]}
       />
     );
