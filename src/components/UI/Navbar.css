@@ -1,0 +1,18 @@
+#navbar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: cadetblue;
+}
+
+#nav-ul {
+    margin-left: 300px;
+    display: flex;
+    flex-direction: row;
+}
+
+#nav-ul > a {
+    margin-left: 10px
+}
+
