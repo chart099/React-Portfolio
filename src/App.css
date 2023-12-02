@@ -38,7 +38,7 @@ button:hover {
  flex-wrap: wrap;
  }
 
- #project-container > img {
+ #project-container > a >img {
   width: 300px;
   margin-left: 50px;
   margin-bottom: 50px;
