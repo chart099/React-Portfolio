@@ -16,7 +16,6 @@ export default function PortfolioPage() {
                    <div>
                    <h6>Note Taker</h6>
                    <a href="https://github.com/chart099/Note-Taker" target="_blank"><img src="/gettyimages-535911393-612x612.jpg" alt="abstract color blobs" /></a>
-                    <h6>Note Taker</h6>
                     </div>
                     <div>
                     <h6>SVG Generator</h6>
