@@ -1,20 +1,37 @@
-export default function ContactPage() {
-    return (
-        <div className=' justify-content-center '>
-            <h2>Contact</h2>
-            <form action="">
-                <label htmlFor="name">Name:</label>
-                <input type="text" id="name"  className="form-control"/>
-                <label for="email">Email address</label>
-                <input type="email" className="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email"/>
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
-                <div className="form-group">
-                    <label for="message">Message</label>
-                    <textarea className="form-control" id="message" rows="3"></textarea>
-                </div>
-                <p id="submit-message"></p>
-                <button>Submit</button>
-            </form>
-        </div>
-    );
-}
+const YOUR_SERVICE_ID = 'service_rkjzld8'
+const YOUR_TEMPLATE_ID = 'template_9bf2fa8'
+const YOUR_PUBLIC_KEY = 'rox0ZTOSfplw_2xGt'
+
+export default function ContactPage () {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm( YOUR_SERVICE_ID, YOUR_TEMPLATE_ID, form.current, YOUR_PUBLIC_KEY)
+      .then((result) => {
+          console.log(result.text);
+          form.current.reset();
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
+
+  return (
+    <>
+    <h2>Contact Me!</h2>
+    <form ref={form} onSubmit={sendEmail}>
+      <label>Name: </label>
+      <input type="text" name="user_name" id="name"  />
+      <label>Email: </label>
+      <input id="email" type="email" name="user_email" />
+      <label>Message: </label>
+      <textarea name="message" id="message" rows="3" />
+      <button type="submit" value="Send">Submit</button>
+    </form>
+    </>
+  );
+};

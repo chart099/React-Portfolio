@@ -2,6 +2,13 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+
+  --eerie-black: #222;
+  --white: #fff;
+  --lapis: #1c5d99;
+  --moonstone: #639fab;
+  --powder-blue: #bbcde5;
+
 }
 
 body {
@@ -12,12 +19,24 @@ body {
   width: 100%;
 }
 
+#root{
+  width: 100%;
+}
+
+#navbar{
+  display: flex;
+  justify-content: space-between;
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
 
 button {
+  width: 25%;
+  margin: 10px auto;
+  background-color: var(--powder-blue);
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
@@ -32,7 +51,7 @@ button:hover {
 }
 
 #project-container {
-  width: 800px;
+
  display: flex;
  flex-direction: row;
  flex-wrap: wrap;
@@ -59,7 +78,59 @@ button:hover {
 
  #project-container > h6 {
   margin-top: -10px;
+ }
 
+ .project{
+  width: 400px;
+ }
+
+ .project-photo{
+  width: 300px;
  }
 
 
+
+ form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  width: 50%;
+ }
+
+ #skills{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0 auto;
+ }
+
+ .skill-list{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--powder-blue);
+  width: 25%;
+  border-radius: 15px;
+  margin-top: 20px;
+  font-size: 20px;
+ }
+
+ .skill-list > h3 {
+  text-align: center;
+  margin-top: 15px;
+ }
+
+ @media only screen and (max-width: 500px) {
+  #skills {
+    flex-direction: column;
+  }
+  .skill-list{
+    width: 50%;
+  }
+}
+ 
+ @media only screen and (max-width: 300px) {
+  #project-container > div > a >img {
+    width: 270px;
+   }
+}

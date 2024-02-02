@@ -10,6 +10,8 @@ import AboutPage from './pages/AboutPage.jsx';
 import PortfolioPage from './pages/PortfolioPage.jsx';
 import ResumePage from './pages/ResumePage.jsx';
 import ContactPage from './pages/ContactPage.jsx';
+import ExperiencePage from './pages/ExperiencePage.jsx';
+import ProjectDisplay from './pages/ProjectDisplay.jsx';
 
 
 const router = createBrowserRouter([
@@ -29,6 +31,14 @@ const router = createBrowserRouter([
       {
         path: 'portfolio',
         element: <PortfolioPage />,
+      },
+      {
+        path: 'project/:id',
+        element: <ProjectDisplay />,
+      },
+      {
+        path: 'experience',
+        element: <ExperiencePage />,
       },
       {
         path: 'resume',
