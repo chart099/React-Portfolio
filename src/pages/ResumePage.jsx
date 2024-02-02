@@ -1,6 +1,9 @@
 export default function ResumePage() {
     return (
+        <>
+        <h2>Skills</h2>
         <div id="skills">
+        
             <div className="skill-list">
             <h3>Front-End Skills</h3>
             <ul >
@@ -34,5 +37,6 @@ export default function ResumePage() {
             </div>
            
         </div>
+        </>
     );
 }

@@ -45,39 +45,29 @@ button {
   font-family: inherit;
   cursor: pointer;
   transition: border-color 0.25s;
+  text-align: center;
 }
 button:hover {
   border-color: #646cff;
 }
 
-#project-container {
-
- display: flex;
- flex-direction: row;
- flex-wrap: wrap;
- }
-
- #project-container > div {
+.project-display{
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
- }
+ 
+}
 
- #project-container > div > a {
-  margin: 0;
-  padding: 0;
- }
+.project-display > img{
+  margin: 0 25%;
+}
 
- #project-container > div > a >img {
-  width: 300px;
-  margin-left: 50px;
-  margin-bottom: 50px;
-  padding: 0;
- }
-
- #project-container > h6 {
-  margin-top: -10px;
+#project-container {
+ display: flex;
+ flex-direction: column;
+ list-style-type: none;
  }
 
  .project{
@@ -88,7 +78,11 @@ button:hover {
   width: 300px;
  }
 
-
+.portfolio-items{
+  background-color: var(--powder-blue);
+  width: 75%;
+  border-radius: 10px;
+}
 
  form {
   display: flex;
@@ -120,13 +114,33 @@ button:hover {
   margin-top: 15px;
  }
 
+ #about-text{
+  margin: 0 20px;
+ }
+
+ #github{
+  width: 8%;
+  margin: 0 auto;
+ }
+
  @media only screen and (max-width: 500px) {
   #skills {
     flex-direction: column;
   }
   .skill-list{
-    width: 50%;
+    width: 75%;
+    margin: 10px auto;
   }
+  .project-display > img{
+    margin: 0 10%;
+  }
+  #github{
+    width: 10%;
+   }
+
+   form{
+    width: 80%;
+   }
 }
  
  @media only screen and (max-width: 300px) {

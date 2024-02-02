@@ -2,18 +2,20 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import {ProjectList} from "../helpers/ProjectList";
 
-// import {faGithub} from '@fortawesome/fontawesome-svg-icons'
-
 
 function ProjectDisplay(){
     const { id } = useParams();
     const project = ProjectList[id]
     return (
-        <div className="project">
-            <h1>{project.name}</h1>
+        <>
+        <h1>Portfolio Projects</h1>
+        <div className="project-display">
+            <h2>{project.name}</h2>
             <img src={project.image} alt={project.alt} />
-            <p>Skills: {project.skills}</p>
+            <p><b>Skills:</b> {project.skills}</p>
+            <a href={project.link} target='_blank'><img id="github" src="/github.svg" alt="github logo" /></a>
         </div>
+        </>
     )  
 }
 

@@ -6,15 +6,15 @@ export default function PortfolioPage() {
     return (
         <>
             <h2>Portfolio Projects</h2>
-            <div id="project-container">
+            <ul id="project-container" >
                 {ProjectList.map((project, idx) => {
                     return (
-                        <>
-                        <PortfolioItem  id={idx} name={project.name} image={project.image}/>
-                        </>
+                        <li>
+                        <PortfolioItem className="project-list-item" id={idx} name={project.name} image={project.image}/>
+                        </li>
                     )
                 })}
-            </div>
+            </ul>
         </>
     );
 }
